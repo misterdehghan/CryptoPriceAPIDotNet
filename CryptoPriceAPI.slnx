@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/Doc/" />
+  <Folder Name="/Solution Items/" />
+  <Folder Name="/Src/" />
+  <Folder Name="/Src/Common/" />
+  <Folder Name="/Src/Core/">
+    <Project Path="Application/Application.csproj" />
+    <Project Path="Domain/Domain.csproj" />
+  </Folder>
+  <Folder Name="/Src/Infrastructures/">
+    <Project Path="Infrastructure/Infrastructure.csproj" />
+    <Project Path="Persistence/Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Src/Presentation/">
+    <Project Path="Endpoint/Endpoint.csproj" />
+  </Folder>
+  <Folder Name="/Test/" />
+</Solution>
