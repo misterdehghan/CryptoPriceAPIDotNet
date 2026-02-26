@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Doc/" />
-  <Folder Name="/Solution Items/" />
+  <Folder Name="/Solution Items/">
+    <File Path="Answers to technical questions.md" />
+  </Folder>
   <Folder Name="/Src/" />
   <Folder Name="/Src/Common/" />
   <Folder Name="/Src/Core/">
