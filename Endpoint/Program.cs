@@ -1,4 +1,22 @@
+
+using Application.Interfaces;
+using Application.Services;
+using Infrastructure;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+// DI
+builder.Services.AddScoped<ICryptoService, CryptoService>();
+builder.Services.Configure<CoinMarketCapOptions>(
+    builder.Configuration.GetSection("CoinMarketCap"));
+
+builder.Services.AddHttpClient<ICoinMarketCapClient, CoinMarketCapClient>();
+builder.Services.AddScoped<IExchangeRatesClient, ExchangeRatesClient>();
+
+builder.Services.AddControllers();
+
 
 // Add services to the container.
 
@@ -7,6 +25,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 var summaries = new[]
 {
